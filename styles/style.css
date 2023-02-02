@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Helvetica;
+    outline: 1px solid red;
 }
 
 .titulo {
@@ -76,6 +77,13 @@ a:hover {
     transition: all 0.2s ease;
 }
 
+.imagen {
+    top: 300px;
+    width: 350px;
+    position: absolute;
+    left: 65vw;
+}
+
 .enlaces {
     top: 300px;
     left: 7vw;
@@ -99,9 +107,72 @@ article {
     position: absolute;
 }
 
-.imagen {
+.rules {
     top: 300px;
-    width: 350px;
+    width: 55vw;
+    height: auto;
+    left: 270px;
     position: absolute;
-    left: 65vw;
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+
+.rulestit {
+    display: inline;
+    text-align: center;
+}
+
+dt {
+    margin: 30px 0px 0px 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+dd {
+    margin: 10px 5px 0px 30px;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.list {
+    counter-reset: item;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+
+.list>li {
+    list-style-position: inside;
+    margin: 10px 5px 0px 0px;
+    counter-increment: item;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0px 10px 0;
+    text-indent: -1.2rem;
+}
+
+.list>li::before {
+    content: counter(item) '.';
+    display: inline-block;
+    font-weight: bold;
+    padding-right: .5rem;
+    text-align: right;
+    width: 2rem;
+}
+
+.sublist {
+    list-style-position: inside;
+    margin: 10px 5px 0px 40px;
+}
+
+.sublist>li {
+    padding: 0px 0px 10px 0px;
+    list-style-type: lower-latin;
+}
+
+ul>li{
+    list-style-position: inside;
+    padding-left: 40px;
 }
