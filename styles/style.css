@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Helvetica;
+    outline: 1px solid red;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
 }
 
 .img-bg {
@@ -16,14 +22,20 @@
 }
 
 .titulo {
-    margin: 10px 100px;
-    padding: 40px 0px;
-    background-image: url(../img/design1_image2.jpg);
-    background-position: 0px 100px;
-    background-repeat: no-repeat;
-    background-size: calc(100vw - 200px);
     display: flex;
-    height: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 30px 50px 30px 50px;
+
+}
+
+.titback {
+    height: 180px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 0px 10%;
 }
 
 
@@ -31,11 +43,17 @@
     height: 70px;
     border: 2px solid;
     border-radius: 7px;
-    position: absolute;
     top: 37px;
     left: 670px;
     background-color: azure;
     z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 50px;
+    height: auto;
 }
 
 h1 {
@@ -44,15 +62,10 @@ h1 {
 }
 
 h2 {
-    margin: 0px 100px;
-    width: calc(100% - 200px);
-    top: 260px;
-    padding: 0px 30px;
+    width: 100%;
     background-color: white;
     border: 2px solid black;
     color: black;
-    position: absolute;
-    display: block;
     text-align: center;
 }
 
@@ -64,13 +77,20 @@ p {
     padding-top: 40px;
 }
 
+.enlaces {
+    width: 150px;
+    height: 400px;
+    padding: 10px;
+    z-index: 2;
+}
+
 nav>a {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 40px 0px;
     color: white;
     border: 2px solid black;
     background-color: cornflowerblue;
-    text-align: center;
     font-size: 18px;
     text-decoration: none;
     box-shadow: 3px 3px darkslategrey;
@@ -87,50 +107,40 @@ a:hover {
 }
 
 .imagen {
-    top: 300px;
-    width: 350px;
-    position: absolute;
-    left: 65vw;
-}
-
-.enlaces {
-    top: 300px;
-    left: 7vw;
-    width: 150px;
-    height: 400px;
-    position: absolute;
-    padding: 10px;
-    z-index: 2;
+    width: 30vw;
+    object-fit: contain;
+    object-position: 0px 0px;
 }
 
 article {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 30px;
 }
 
 .articulos,
 .contacto {
-    top: 300px;
     width: 45vw;
-    height: auto;
-    left: 20vw;
-    position: absolute;
 }
 
 .rules,
 .info {
-    top: 300px;
-    width: 55vw;
-    height: auto;
-    left: 270px;
-    position: absolute;
-    margin-top: 30px;
-    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    padding-bottom: 50px;
 }
 
 .rulestit {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+
+dl {
+    width: 90%;
 }
 
 dt {
@@ -189,13 +199,13 @@ ul>li {
 }
 
 table {
-    width: 100%;
+    width: 80%;
     margin-top: 30px;
     border-collapse: separate;
     border-spacing: 0 1em;
 }
 
-/* table {
+table {
     border: 3px solid grey;
 }
 
@@ -205,7 +215,7 @@ td {
 
 tr:nth-child(even) {
     background-color: #D6EEEE;
-} */
+}
 
 table>caption {
     text-align: left;
@@ -227,6 +237,7 @@ td {
 .dcontact {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .dcontact>p {
